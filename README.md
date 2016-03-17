@@ -174,3 +174,24 @@ console.log(count);
 ```
 
 javascript仅有一种数字，它能够表示的整数范围是-2^53~2^53，所以END + 1 的值其实是等于END的，这也就造成了死循环
+
+#**Switch**
+```javascript
+function showCase(value) {
+    switch(value) {
+    case 'A':
+        console.log('Case A');
+        break;
+    case 'B':
+        console.log('Case B');
+        break;
+    case undefined:
+        console.log('undefined');
+        break;
+    default:
+        console.log('Do not know!');
+    }
+}
+showCase(new String('A'));
+```
+case的是使用===匹配的，而new出来的是一个Object，只有在使用==时候才等于'A'
