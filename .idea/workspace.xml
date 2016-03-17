@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77cff8fb-4fc6-4a9f-885c-abf01261ec11" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="JavaScript-Puzzlers.iws" />
@@ -28,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.8076923">
-              <caret line="295" column="12" selection-start-line="295" selection-start-column="3" selection-end-line="295" selection-end-column="12" />
+              <caret line="362" column="17" selection-start-line="362" selection-start-column="3" selection-end-line="362" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -152,7 +151,7 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8076923">
-          <caret line="295" column="12" selection-start-line="295" selection-start-column="3" selection-end-line="295" selection-end-column="12" />
+          <caret line="362" column="17" selection-start-line="362" selection-start-column="3" selection-end-line="362" selection-end-column="17" />
           <folding />
         </state>
       </provider>

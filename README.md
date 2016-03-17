@@ -310,3 +310,63 @@ Number.MIN_VALUE 是最小的比0大的数, -Number.MAX_VALUE 可能会返回给
 2 == [[[2]]]        // true
 ```
 == 运算符会进行类型转换。左右两边不断调用 toString 的结果就是 2
+
+#**Scope**
+```javascript
+(function(){
+  var x = y = 1;
+})();
+console.log(y);
+console.log(x);
+```
+var x = y =1; 分解成实际是 var x = y; y = 1;
+
+函数内的变量没有用 var 声明，则产生了一个隐身的全局变量
+
+#**Regular Expression**
+```javascript
+var a = /123/,
+    b = /123/;
+a == b
+a === b
+```
+
+正则表达式不能比较，因为每个正则都是唯一的
+
+a和b都是正则实例的字面量表示，永远都不会相等
+
+类似：var a = {a: 1},b = {a: 1}; a==b;a===b 结果是 false 一样
+
+#**Arrays are compared lexicographically with > and <,**
+
+```javascript
+var a = [1, 2, 3],
+    b = [1, 2, 3],
+    c = [1, 2, 4]
+a ==  b
+a === b
+a >   c
+a <   c
+```
+
+数组通过>和<会安顺序比较, 但==和===不会
+
+#**Trailing Comma**
+```javascript
+[,,,].join(", ")
+```
+
+Javascript 数组允许以 , 号结尾。所以题目中的数组实际上是一个 undefined * 3 的数组。
+
+相当于[undefined, undefined, undefined,] => [undefined, undefined, undefined]
+
+#**Reserved Words**
+var a = {class: "Animal", name: 'Fido'};
+a.class
+```
+
+输出需要看是什么浏览器 class 是保留字, 在chrome Firefox 和 Opera中可作为属性名, 但IE不行
+
+
+
+
