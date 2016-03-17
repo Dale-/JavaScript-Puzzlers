@@ -243,7 +243,70 @@ console.log( Boolean([]) == Boolean(![]) ); //false
 ```
 “[]”的类型“object”，而“![]”的类型是“boolean”
 ```javascript
-console.log( [] == [] ); //false
+console.log( [] == [] );  //false
 var a = [];
-console.log( a == a ); //false
+console.log( a == a );    //true
 ```
+
+###进行==当两个运算数的类型不同时，将它们转换成相同的类型：
+* 一个数字与一个字符串，字符串转换成数字之后，进行比较。
+* true转换为1、false转换为0，进行比较。
+* 一个对象、数组、函数 与 一个数字或字符串，对象、数组、函数转换为原始类型的值，然后进行比较(先使用valueOf，如果不行就使用toString)
+
+###当两个运算数类型相同，或转换成相同类型后：
+* 2个字符串：同一位置上的字符相等，2个字符串就相同。
+* 2个数字：2个数字相同，就相同。如果一个是NaN，或两个都是NaN，则不相同。
+* 2个都是true，或者2个都是false，则相同。
+* 2个引用的是同一个对象、函数、数组，则它们相等，如果引用的不是同一个对象、函数、数组，则不相同，即使这2个对象、函数、数组可以转换成完全相等的原始值。
+* 2个null，或者2个都是未定义的，那么它们相等。
+
+#**连续+-符号**
+```javascript
+> 1 + - + + + - + 1
+2
+> 1 + - + + + - - 1
+0
+```
+
+1+后面的运算符全部被当做后面的1的正负号来处理
+
+#**Arguments**
+```javascript
+function sidEffecting(ary) {
+  ary[0] = ary[2];
+}
+function bar(a,b,c) {
+  c = 10
+  sidEffecting(arguments);
+  return a + b + c;
+}
+bar(1,1,1)   //21
+```
+
+在javascript中变量中 arguments 是个对象，所以arguments 和局部变量所引用的内容是一样的
+
+#**Reverse**
+```javascript
+var x = [].reverse;
+x();
+```
+
+reverse 方法返回调用者自身,x() 的调用者是 window 对象
+
+#**MIN_VALUE**
+```javascript
+Number.MIN_VALUE > 0
+```
+Number.MIN_VALUE 是最小的比0大的数, -Number.MAX_VALUE 可能会返回给你一个最大的负整数
+
+#**< 隐身类型转换**
+```javascript
+[1 < 2 < 3, 3 < 2 < 1]   //[true, true]
+```
+< 会进行隐身类型转换；所以第二个表达式 3 < 2 结果为 false，false < 1 转换的结果为 true
+
+#**== 运算符进行类型转换**
+```javascript
+2 == [[[2]]]        // true
+```
+== 运算符会进行类型转换。左右两边不断调用 toString 的结果就是 2
