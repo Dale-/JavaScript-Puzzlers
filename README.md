@@ -228,7 +228,7 @@ if ([0]) {
   console.log("wut");
 }
 ```
-###[0]被当做true却又不等同于true
+[0]被当做true却又不等同于true
 ```javascript
 > Boolean([0])
 true
@@ -395,9 +395,3 @@ a === b
 这个问题等同于问Function.length === Function.prototype.length
 
 一个是Function自己参数的长度，一个是通过Function构造函数继承过来参数的长度
-
-
-
-
-
-
