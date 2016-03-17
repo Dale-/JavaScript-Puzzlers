@@ -23,6 +23,7 @@ parseInt("2",1);        // 返回 NaN
 parseInt("2","1");      // 返回 NaN
 parseInt("2","0");      // 返回 2
 ```
+第二个参数是0的话，0会被当做10来处理
 
 ### map 方法
 
@@ -211,3 +212,38 @@ var values = [7, 4, '13', -9, Infinity];
 values.map(isSane);
 ```
 '13'会自动转换为数字13，-9%2=-1，，Infinity % 2 = NaN
+
+#**isArray**
+```javascript
+Array.isArray( Array.prototype )
+```
+Array.prototype is an Array （[]）
+
+#**[0]**
+```javascript
+var a = [0];
+if ([0]) {
+  console.log(a == true);
+} else {
+  console.log("wut");
+}
+```
+###[0]被当做true却又不等同于true
+```javascript
+> Boolean([0])
+true
+> [0] == true
+false
+```
+#**两个空数组比较**
+```javascript
+console.log( [] == ![] );   //false
+console.log( Boolean([]));  //true
+console.log( Boolean([]) == Boolean(![]) ); //false
+```
+“[]”的类型“object”，而“![]”的类型是“boolean”
+```javascript
+console.log( [] == [] ); //false
+var a = [];
+console.log( a == a ); //false
+```
