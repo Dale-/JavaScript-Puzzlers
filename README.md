@@ -361,11 +361,42 @@ Javascript 数组允许以 , 号结尾。所以题目中的数组实际上是一
 相当于[undefined, undefined, undefined,] => [undefined, undefined, undefined]
 
 #**Reserved Words**
+```javascript
 var a = {class: "Animal", name: 'Fido'};
 a.class
 ```
 
 输出需要看是什么浏览器 class 是保留字, 在chrome Firefox 和 Opera中可作为属性名, 但IE不行
+
+#**Date**
+```javascript
+var a = new Date("epoch")
+```
+
+得到的是一个无效日期"Invalid Date"
+
+```javascript
+var a = new Date("2014-03-19"),
+    b = new Date(2014, 03, 19);
+[a.getDay() === b.getDay(), a.getMonth() === b.getMonth()]
+
+// => [false, false]
+```
+
+Date构造函数可以传入多种类型的参数, 但如果是传入多个参数, 代表月份的第二个参数是从0开始的, 也就是3代表4月
+
+#**Function.length**
+```javascript
+var a = Function.length,
+    b = new Function().length
+a === b
+```
+
+这个问题等同于问Function.length === Function.prototype.length
+
+一个是Function自己参数的长度，一个是通过Function构造函数继承过来参数的长度
+
+
 
 
 

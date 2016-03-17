@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="77cff8fb-4fc6-4a9f-885c-abf01261ec11" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="JavaScript-Puzzlers.iws" />
@@ -26,8 +27,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8076923">
-              <caret line="362" column="17" selection-start-line="362" selection-start-column="3" selection-end-line="362" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.9358974">
+              <caret line="385" column="59" selection-start-line="385" selection-start-column="59" selection-end-line="385" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -150,8 +151,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8076923">
-          <caret line="362" column="17" selection-start-line="362" selection-start-column="3" selection-end-line="362" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.9358974">
+          <caret line="385" column="59" selection-start-line="385" selection-start-column="59" selection-end-line="385" selection-end-column="59" />
           <folding />
         </state>
       </provider>
