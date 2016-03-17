@@ -94,7 +94,7 @@ undefined 都是一种默认值的存在
 
 * 当声明一个变量/属性后，如果没有初始化，那么默认值就是 undefined
 * 如果函数没有显式注明返回值， 默认值是 undefined
-* 如果函数中的参数，在调用时为获得参数，默认的也是 undefeind
+* 如果函数中的参数，在调用时为获得参数，默认的也是 undefined
 
 ### 交集
 ```javascript
@@ -116,9 +116,9 @@ typeof undefined      //"undefined"
 ```
 ### 类型转换
 
-* 当转换为字符串时，null 和 undefiend 分别转换为字符串形式的 “null” 和 “undefiend”
-* 当转换为布尔值时，null 和 undefiend 都转换布尔值 false
-* 当转换为数值时，null 和 undefiend 分别转换为 0 和 NaN
+* 当转换为字符串时，null 和 undefined 分别转换为字符串形式的 “null” 和 “undefined”
+* 当转换为布尔值时，null 和 undefined 都转换布尔值 false
+* 当转换为数值时，null 和 undefined 分别转换为 0 和 NaN
 
 ### 重点来了
 
