@@ -195,3 +195,19 @@ function showCase(value) {
 showCase(new String('A'));
 ```
 case的是使用===匹配的，而new出来的是一个Object，只有在使用==时候才等于'A'
+
+#**Modulo Operator**
+```javascript
+function isOdd(num) {
+    return num % 2 == 1;
+}
+function isEven(num) {
+    return num % 2 == 0;
+}
+function isSane(num) {
+    return isEven(num) || isOdd(num);
+}
+var values = [7, 4, '13', -9, Infinity];
+values.map(isSane);
+```
+'13'会自动转换为数字13，-9%2=-1，，Infinity % 2 = NaN
