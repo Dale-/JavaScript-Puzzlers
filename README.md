@@ -124,3 +124,21 @@ typeof undefined      //"undefined"
 * undefined 是全局对象的一个属性
 * 所有对象都是 Object 及其子类的实例，但 null 不是，null 更严格应该划分为原始值类型
 * null 和 undefined 都可以转换为 false，但不等值于 false
+
+#** [].reduce(Math.pow)**
+### reduce()
+
+接收一个函数作为累加器（accumulator），数组中的每个值（从左到右）开始缩减，最终为一个值
+
+**语法:** arr.reduce(callback,[initialValue])
+callback:执行数组中每个值的函数，包含四个参数
+
+* previousValue:上一次调用回调返回的值，或者是提供的初始值（initialValue）
+* currentValue 数组中当前被处理的元素
+* index 当前元素在数组中的索引
+* array 调用 reduce 的数组
+* initialValue: 作为第一次调用 callback 的第一个参数
+
+```javascript
+[x1, x2, x3, x4].reduce(f) = f(f(f(x1, x2), x3), x4)
+```
