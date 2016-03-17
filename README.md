@@ -148,4 +148,29 @@ callback:执行数组中每个值的函数，包含四个参数
 var val = 'smtg';
 console.log('Value is ' + (val === 'smtg') ? 'Something' : 'Nothing');
 ```
-+运算符优先级大于三元表达式，因此先计算 'Value is ' + (val === 'smtg') 为 'Value is true' ? 'Something' : 'Nothing'，最终结果为Something
+由于+运算符优先级大于三元表达式
+
+因此先计算 'Value is ' + (val === 'smtg') 为 'Value is true' ? 'Something' : 'Nothing'
+
+#**+Filter**
+```javascript
+var ary = [0,1,2];
+ary[10] = 10;
+ary.filter(function(x) { return x === undefined;});
+```
+有没有人和我一样自信的以为是[undefined * 7]
+### 重点来了
+实际结果是[],因为Array.prototype.filter不会应用到缺失的元素上
+
+#**Highest Possible Number**
+```javascript
+var END = Math.pow(2, 53);
+var START = END - 100;
+var count = 0;
+for (var i = START; i <= END; i++) {
+    count++;
+}
+console.log(count);
+```
+
+javascript仅有一种数字，它能够表示的整数范围是-2^53~2^53，所以END + 1 的值其实是等于END的，这也就造成了死循环
