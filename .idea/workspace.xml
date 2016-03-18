@@ -26,8 +26,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.52991456">
-              <caret line="437" column="1" selection-start-line="437" selection-start-column="1" selection-end-line="437" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.8076923">
+              <caret line="353" column="101" selection-start-line="353" selection-start-column="101" selection-end-line="353" selection-end-column="101" />
               <folding />
             </state>
           </provider>
@@ -109,6 +109,9 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="77cff8fb-4fc6-4a9f-885c-abf01261ec11" name="Default" comment="" />
@@ -140,6 +143,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
@@ -150,8 +161,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52991456">
-          <caret line="437" column="1" selection-start-line="437" selection-start-column="1" selection-end-line="437" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.8076923">
+          <caret line="353" column="101" selection-start-line="353" selection-start-column="101" selection-end-line="353" selection-end-column="101" />
           <folding />
         </state>
       </provider>

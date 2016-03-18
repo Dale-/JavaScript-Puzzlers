@@ -337,6 +337,22 @@ a和b都是正则实例的字面量表示，永远都不会相等
 
 类似：var a = {a: 1},b = {a: 1}; a==b;a===b 结果是 false 一样
 
+```javascript
+var lowerCaseOnly =  /^[a-z]+$/;
+[lowerCaseOnly.test(null), lowerCaseOnly.test()]
+
+=> [true, true]
+```
+传入test的参数arguments将会通过toString转化为'null'和'undefined'
+
+```javascript
+"1 2 3".replace(/\d/g, parseInt)
+
+=> 1, NaN, 3
+```
+
+传入parseInt中的参数有2个，第一个是正则对象匹配到的数字，第二个参数是数字在字符串中的位置，依次传给parseInt的参数为[1, 0] [2, 2] [3, 4]。所以答案是1, NaN, 3
+
 #**Arrays are compared lexicographically with > and <,**
 
 ```javascript
