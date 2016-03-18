@@ -392,9 +392,9 @@ Date对象还是一个构造函数，对它使用new命令，会返回一个Date
 
 * new Date(milliseconds)
 
-Date对象接受从1970年1月1日00:00:00 UTC开始计算的毫秒数作为参数。这意味着如果将Unix时间戳作为参数，必须将Unix时间戳乘以1000
+>Date对象接受从1970年1月1日00:00:00 UTC开始计算的毫秒数作为参数。这意味着如>果将Unix时间戳作为参数，必须将Unix时间戳乘以1000
 
-```javascript
+>```javascript
 > new Date(0)
 => Thu Jan 01 1970 08:00:00 GMT+0800 (CST)
 > new Date(10000)
@@ -402,11 +402,12 @@ Date对象接受从1970年1月1日00:00:00 UTC开始计算的毫秒数作为参�
 > new Date(3600 * 24 * 1000)
 => Fri Jan 02 1970 08:00:00 GMT+0800 (CST)
 ```
+
 * new Date(datestring)
 
-Date对象还接受一个日期字符串作为参数，返回所对应的时间*返回object*
+>Date对象还接受一个日期字符串作为参数，返回所对应的时间*返回object*
 
-```javascript
+>```javascript
 new Date("2013-2-15")
 new Date('2013/2/15')
 new Date("2013-FEB-15")
@@ -415,32 +416,26 @@ new Date("FEB 15, 2013")
 new Date("Feberuary, 15, 2013")
 new Date("Feberuary 15, 2013")
 new Date("15, Feberuary, 2013")
-
-// 上面多种日期字符串的写法，返回的都是同一个时间
 ```
+上面多种日期字符串的写法，返回的都是同一个时间
 
 * new Date(year, month [, day, hours, minutes, seconds, ms])
 
-Date对象还可以接受多个整数作为参数，依次表示年、月、日、小时、分钟、秒和毫秒。
+>Date对象还可以接受多个整数作为参数，依次表示年、月、日、小时、分钟、秒和毫秒。
 
-如果采用这种格式，最少需要提供两个参数（年和月），其他参数都是可选的，默认等于0。因为如果只使用“年”这一个参数，Date对象会将其解释为毫秒数
+>如果采用这种格式，最少需要提供两个参数（年和月），其他参数都是可选的，默认等于0。因为如果只使用“年”这一个参数，Date对象会将其解释为毫秒数
 
-```javascript
-new Date(2013)
-// Thu Jan 01 1970 08:00:02 GMT+0800 (CST)
+>```javascript
+>new Date(2013)                          // Thu Jan 01 1970 08:00:02 GMT+0800 (CST)
 
-new Date(2013, 0)
-// Tue Jan 01 2013 00:00:00 GMT+0800 (CST)
+>new Date(2013, 0)                       // Tue Jan 01 2013 00:00:00 GMT+0800 (CST)
 
-new Date(2013, 0, 1)
-// Tue Jan 01 2013 00:00:00 GMT+0800 (CST)
+>new Date(2013, 0, 1)                    // Tue Jan 01 2013 00:00:00 GMT+0800 (CST)
 
-new Date(2013, 0, 1, 0)
-// Tue Jan 01 2013 00:00:00 GMT+0800 (CST)
+>new Date(2013, 0, 1, 0)                 // Tue Jan 01 2013 00:00:00 GMT+0800 (CST)
 
-new Date(2013, 0, 1, 0, 0, 0, 0)
-// Tue Jan 01 2013 00:00:00 GMT+0800 (CST)
-```
+>new Date(2013, 0, 1, 0, 0, 0, 0)        // Tue Jan 01 2013 00:00:00 GMT+0800 (CST)
+>```
 
 ### 重点来了
 
