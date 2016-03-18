@@ -395,3 +395,22 @@ a === b
 这个问题等同于问Function.length === Function.prototype.length
 
 一个是Function自己参数的长度，一个是通过Function构造函数继承过来参数的长度
+
+#**Match**
+```javascript
+if ('http://giftwrapped.com/picture.jpg'.match('.gif')) {
+  'a gif file'
+} else {
+  'not a gif file'
+}
+```
+
+匹配上的是["/gif"]
+
+#**Math min & max**
+```javascript
+var min = Math.min(), max = Math.max()
+min < max
+```
+
+当没有传入参数的时候Math.min()返回Infinity,Math.max()将会返回-Infinify
