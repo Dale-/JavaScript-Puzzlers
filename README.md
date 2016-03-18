@@ -270,6 +270,18 @@ console.log( a == a );    //true
 
 1+后面的运算符全部被当做后面的1的正负号来处理
 
+#**+-运算符的类型转换**
+```javascript
+> '5' + 3
+'53'
+> '5' - 3
+2
+```
+
+String会处理加法，这里将3转化为字符串
+
+遇到减法的话则把字符串转化为数字
+
 #**Arguments**
 ```javascript
 function sidEffecting(ary) {
