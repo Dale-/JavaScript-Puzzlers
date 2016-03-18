@@ -483,6 +483,18 @@ var a = new Date("2014-03-19"),
 
 Date构造函数可以传入多种类型的参数, 但如果是传入多个参数, 代表月份的第二个参数是从0开始的, 也就是3代表4月
 
+
+#**Function Name**
+
+```javascript
+function foo() { }
+var oldName = foo.name;
+foo.name = "bar";
+[oldName, foo.name]
+```
+
+function的name 只读
+
 #**Function.length**
 ```javascript
 var a = Function.length,
