@@ -551,6 +551,8 @@ min < max
 
 Functions 有一个 prototype 属性，但是其它对象没有
 
+prototype 是函数的一个属性
+
 ```javascript
 >  function f() {}
 >  f.prototype
@@ -561,3 +563,50 @@ Functions 有一个 prototype 属性，但是其它对象没有
 => undefined
 
 ```
+
+```javascript
+>  var str = new String("Hello World");
+>  Object.getPrototypeOf(str)
+=> String {length: 0, [[PrimitiveValue]]: ""}
+
+>  var boo = new Boolean();
+>  Object.getPrototypeOf(boo)
+=> Boolean {[[PrimitiveValue]]: false}
+
+>  var num = new Number(2);
+>  Object.getPrototypeOf(num)
+=> Number {[[PrimitiveValue]]: 0}
+
+>  function f() {}
+>  Object.getPrototypeOf(f)
+=> function f() {}
+
+```
+
+由上面的分析可知
+
+```javascript
+var a = {}, b = Object.prototype;
+[a.prototype === b, Object.getPrototypeOf(a) === b]
+
+=> [false, true]
+```
+
+```javascript
+function f() {}
+var a = f.prototype, b = Object.getPrototypeOf(f);
+a === b
+
+=> false
+```
+
+```javascript
+    function f() {}
+    var parent = Object.getPrototypeOf(f);
+    f.name // ?
+    parent.name // ?
+    typeof eval(f.name) // ?
+    typeof eval(parent.name) //  ?
+```
+
+function 原型对象被定义在其它地方, 有名字, 可以被执行, 但不在当前的作用域中
