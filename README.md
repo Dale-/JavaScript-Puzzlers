@@ -491,9 +491,11 @@ function foo() { }
 var oldName = foo.name;
 foo.name = "bar";
 [oldName, foo.name]
+
+=>[foo, foo]
 ```
 
-function的name 只读
+function的name属性:只读
 
 #**Function.length**
 ```javascript
@@ -524,3 +526,38 @@ min < max
 ```
 
 当没有传入参数的时候Math.min()返回Infinity,Math.max()将会返回-Infinify
+
+#**Prototype**
+```javascript
+>  Array.prototype
+=> []
+
+>  Object.prototype
+=> Object{}
+
+>  String.prototype
+=> String {length: 0, [[PrimitiveValue]]: ""}
+
+>  Boolean.prototype
+=> Boolean {[[PrimitiveValue]]: false}
+
+>  Number.prototype
+=> Number {[[PrimitiveValue]]: 0}
+
+>  Function.prototype
+=> function () {}
+
+```
+
+Functions 有一个 prototype 属性，但是其它对象没有
+
+```javascript
+>  function f() {}
+>  f.prototype
+=> Object {}
+
+>  var str = new String("string");
+>  str.prototype
+=> undefined
+
+```
