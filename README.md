@@ -610,3 +610,22 @@ a === b
 ```
 
 function 原型对象被定义在其它地方, 有名字, 可以被执行, 但不在当前的作用域中
+
+#**Number.x**
+
+```javascript
+    3.toString();
+    3..toString();
+    3...toString();
+```
+
+这里的意思是说3.这样的定义就相当于定义了一个字符串'3'所以可以调用toString方法，其他2个调用的时候会发生错误
+
+#**Number**
+```javascript
+    var two = 0.2;
+    var one = 0.1;
+    var eight = 0.8;
+    var six = 0.6;
+    [two - one == one, eight - six == two]
+```
