@@ -1,3 +1,5 @@
+# JavaScript-Puzzlers
+
 #**["1", "2", "3"].map(parseInt) 返回 [1,NaN,NaN]**
 
 ### parseInt() 函数
